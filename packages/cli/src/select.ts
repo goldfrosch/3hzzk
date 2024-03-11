@@ -27,16 +27,19 @@ try {
 
   const selectDir: string[] = [];
   // TODO: 추후 root 디렉토리 기반으로 접근하게 끔 수정
-  fs.readdirSync(`../../${packageType}`).forEach((dir) => {
-    const files = fs.readdirSync(`../../${packageType}/${dir}`);
+  fs.readdirSync(`../../${packageType}`, { withFileTypes: true })
+    .filter((value) => value.isDirectory())
+    .map((dir) => dir.name)
+    .forEach((dir) => {
+      const files = fs.readdirSync(`../../${packageType}/${dir}`);
 
-    for (const file of files) {
-      if (file === "package.json") {
-        selectDir.push(dir);
-        break;
+      for (const file of files) {
+        if (file === "package.json") {
+          selectDir.push(dir);
+          break;
+        }
       }
-    }
-  });
+    });
 
   const { theme } = await inquirer.prompt({
     type: "list",
