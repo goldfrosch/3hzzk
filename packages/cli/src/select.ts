@@ -3,6 +3,7 @@ import inquirer from "inquirer";
 
 import fs from "node:fs";
 import YAML from "yaml";
+import { execa } from "execa";
 
 console.log(figlet.textSync("Repo Select"));
 console.log(figlet.textSync("Manager"));
@@ -45,6 +46,34 @@ try {
     // 가능하면 캐싱 처리해도 좋음 (디렉토리 탐색이 시간이 좀 걸릴 경우에)
     choices: selectDir,
   });
+
+  const packageJson = fs.readFileSync(
+    `../../${packageType}/${theme}/package.json`,
+    "utf8"
+  );
+
+  const {
+    name: packageName,
+    scripts: packageScripts,
+  }: { name: string; scripts: Record<string, string> } =
+    YAML.parse(packageJson);
+
+  const { command } = await inquirer.prompt({
+    type: "list",
+    name: "command",
+    message: "실행할 커맨드를 선택하세요:",
+    choices: Object.keys(packageScripts),
+    filter(val: string) {
+      return val.toLowerCase();
+    },
+  });
+
+  // TODO: inherit로 해야하는 이유 + 같은 node를 실행할 때 재귀 이슈 뜨는 이유 조사
+  execa("pnpm", ["-F", packageName, command]);
+
+  // TODO: process.exit()의 정확한 역할
+  process.exit(0);
 } catch (error) {
   console.error(error);
+  process.exit(1);
 }
