@@ -72,10 +72,7 @@ try {
   });
 
   // TODO: inherit로 해야하는 이유 + 같은 node를 실행할 때 재귀 이슈 뜨는 이유 조사
-  execa("pnpm", ["-F", packageName, command]);
-
-  // TODO: process.exit()의 정확한 역할
-  process.exit(0);
+  await execa("pnpm", ["-F", packageName, command], { stdio: "inherit" });
 } catch (error) {
   console.error(error);
   process.exit(1);
