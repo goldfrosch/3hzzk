@@ -1,4 +1,4 @@
 packages:
-  - "packages/client/*"
-  - "packages/server/*"
-  - "common/*"
+  - "app/client/*"
+  - "app/server/*"
+  - "package/*"
