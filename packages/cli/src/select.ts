@@ -44,7 +44,7 @@ try {
   const { theme } = await inquirer.prompt({
     type: "list",
     name: "theme",
-    message: "repo를 선택하세요:",
+    message: "Repository를 선택하세요:",
     // TODO 패키지 타입을 기반으로 디렉토리 탐색 후 packages/[packageType]안의 디렉토리를 탐색 후 노출시켜줌 (바로 안에 package.json이 있을 것)
     // 가능하면 캐싱 처리해도 좋음 (디렉토리 탐색이 시간이 좀 걸릴 경우에)
     choices: selectDir,
