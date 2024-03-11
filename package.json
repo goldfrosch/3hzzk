@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client-main": "pnpm -F @chzzk-additional-service-client/main",
-    "cli": "pnpm -F @common/cli"
+    "cli": "pnpm -F @packages/cli"
   },
   "keywords": [],
   "author": "",
