@@ -14,6 +14,13 @@ type Story = StoryObj<typeof Card>;
 
 export const CardNormal: Story = {
   args: {
+    theme: "mild",
     children: "123123",
+  },
+  argTypes: {
+    theme: {
+      control: "radio",
+      options: ["mild", "border"],
+    },
   },
 };
