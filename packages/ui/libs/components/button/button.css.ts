@@ -2,7 +2,10 @@ import { recipe } from "@vanilla-extract/recipes";
 import { typo, vars } from "../../styles";
 
 export const buttonStyle = recipe({
-  base: { borderRadius: vars.borderRadius[8], cursor: "pointer" },
+  base: {
+    borderRadius: vars.borderRadius[8],
+    cursor: "pointer",
+  },
   variants: {
     size: {
       xl: [
@@ -45,13 +48,16 @@ export const buttonStyle = recipe({
     type: {
       filled: {
         border: 0,
+        ":hover": { filter: "brightness(1.1)" },
       },
       outline: {
         background: "none",
+        ":hover": { backgroundColor: "rgba(255, 255, 255, 0.1)" },
       },
       link: {
         border: "none",
-        backgroundColor: "none",
+        background: "none",
+        ":hover": { filter: "brightness(1.1)" },
       },
     },
   },
