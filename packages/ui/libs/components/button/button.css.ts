@@ -10,6 +10,7 @@ export const buttonStyle = recipe({
     size: {
       xl: [
         {
+          minWidth: 117,
           height: 48,
           padding: "0 10px",
         },
@@ -17,6 +18,7 @@ export const buttonStyle = recipe({
       ],
       l: [
         {
+          minWidth: 96,
           height: 44,
           padding: "0 10px",
         },
@@ -24,6 +26,7 @@ export const buttonStyle = recipe({
       ],
       m: [
         {
+          minWidth: 80,
           height: 36,
           padding: "0 10px",
         },
@@ -31,6 +34,7 @@ export const buttonStyle = recipe({
       ],
       s: [
         {
+          minWidth: 66,
           height: 30,
           padding: "0 10px",
         },
@@ -38,6 +42,7 @@ export const buttonStyle = recipe({
       ],
       xs: [
         {
+          minWidth: 52,
           height: 28,
           padding: "0 8px",
         },
@@ -106,5 +111,6 @@ export const buttonStyle = recipe({
   defaultVariants: {
     size: "m",
     type: "filled",
+    theme: "primary",
   },
 });

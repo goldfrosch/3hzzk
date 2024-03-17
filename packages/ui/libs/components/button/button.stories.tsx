@@ -14,10 +14,10 @@ type Story = StoryObj<typeof Button>;
 
 export const ButtonNormal: Story = {
   args: {
-    size: "xs",
+    size: "m",
     type: "filled",
-    theme: "normal",
-    children: "버튼 테스트",
+    theme: "primary",
+    children: "Test",
   },
   argTypes: {
     size: {
