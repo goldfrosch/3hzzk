@@ -1,5 +1,10 @@
 import { globalStyle } from "@vanilla-extract/css";
 import { nanumGothicMedium } from "./text.css";
+import { vars } from "../styles";
+
+globalStyle("body", {
+  backgroundColor: vars.color.gray[5],
+});
 
 globalStyle("*", {
   margin: 0,
@@ -8,7 +13,6 @@ globalStyle("*", {
 
   fontSize: "100%",
   verticalAlign: "baseline",
-  lineHeight: "150%",
   fontFamily: nanumGothicMedium,
 });
 
