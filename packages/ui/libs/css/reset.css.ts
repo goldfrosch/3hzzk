@@ -3,7 +3,7 @@ import { nanumGothicMedium } from "./text.css";
 import { vars } from "../styles";
 
 globalStyle("body", {
-  backgroundColor: vars.color.gray[5],
+  backgroundColor: vars.color.gray[6],
 });
 
 globalStyle("*", {
