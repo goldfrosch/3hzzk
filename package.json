@@ -14,15 +14,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@packages/ui": "workspace:*",
     "@vanilla-extract/css": "^1.14.1",
     "@vanilla-extract/css-utils": "^0.1.3",
     "@vanilla-extract/dynamic": "^2.1.0",
     "@vanilla-extract/recipes": "^0.5.2",
     "@vanilla-extract/sprinkles": "^1.6.1",
-    "@packages/ui": "workspace:*"
+    "classnames": "^2.5.1"
   },
   "devDependencies": {
-    "eslint": "^8.56.0",
     "@chromatic-com/storybook": "1.2.22",
     "@storybook/addon-essentials": "^8.0.0",
     "@storybook/addon-interactions": "^8.0.0",
@@ -33,6 +33,7 @@
     "@storybook/react-vite": "^8.0.0",
     "@storybook/test": "^8.0.0",
     "@vanilla-extract/vite-plugin": "^4.0.6",
+    "eslint": "^8.56.0",
     "prop-types": "15.8.1",
     "storybook": "^8.0.0",
     "vite": "^5.1.4"
