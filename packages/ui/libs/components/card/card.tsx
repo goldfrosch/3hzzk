@@ -15,8 +15,8 @@ const Card = ({ element = "div", children, ...props }: CardProps) => {
   return createElement(
     element,
     {
-      className: classNames(styles.cardLayout, props.className),
       ...props,
+      className: classNames(styles.cardLayout, props.className),
     },
     children
   );
