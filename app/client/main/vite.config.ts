@@ -9,7 +9,11 @@ export default defineConfig({
   plugins: [
     react(),
     vanillaExtractPlugin(),
-    TanStackRouterVite({ routesDirectory: "./src/pages" }),
+    TanStackRouterVite({
+      routesDirectory: "./src/pages",
+      routeFileIgnorePattern: ".(css.ts)",
+      addExtensions: true,
+    }),
   ],
   resolve: {
     alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }],
