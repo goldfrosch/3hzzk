@@ -2,7 +2,7 @@ import { recipe } from "@vanilla-extract/recipes";
 import { typo, vars } from "../../styles";
 
 export const buttonStyle = recipe({
-  base: { borderRadius: vars.borderRadius[8] },
+  base: { borderRadius: vars.borderRadius[8], cursor: "pointer" },
   variants: {
     size: {
       xl: [
