@@ -65,14 +65,26 @@ try {
     type: "list",
     name: "command",
     message: "실행할 커맨드를 선택하세요:",
-    choices: Object.keys(packageScripts),
+    choices: [...Object.keys(packageScripts), "custom"],
     filter(val: string) {
       return val.toLowerCase();
     },
   });
 
-  // TODO: inherit로 해야하는 이유 + 같은 node를 실행할 때 재귀 이슈 뜨는 이유 조사
-  await execa("pnpm", ["-F", packageName, command], { stdio: "inherit" });
+  let customCmd;
+
+  if (command === "custom") {
+    const { cmd } = await inquirer.prompt({
+      type: "input",
+      name: "cmd",
+      message: "실행할 커맨드를 입력하세요:",
+    });
+    customCmd = cmd;
+  }
+
+  await execa("pnpm", ["-F", packageName, customCmd ?? command], {
+    stdio: "inherit",
+  });
 } catch (error) {
   console.error(error);
   process.exit(1);
