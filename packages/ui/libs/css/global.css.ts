@@ -1,5 +1,5 @@
 import { createGlobalTheme } from "@vanilla-extract/css";
 
-import { vars } from "./design-token.css";
+import { vars } from "../styles/design-token.css";
 
 createGlobalTheme(":root", vars);

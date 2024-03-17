@@ -1,4 +1,5 @@
 import { style } from "@vanilla-extract/css";
+import { nanumGothicBold } from "../css/text.css";
 
 export const vars = {
   color: {
@@ -24,11 +25,6 @@ export const vars = {
     12: "12px",
     10: "10px",
   },
-  fontWeight: {
-    bold: "700",
-    medium: "500",
-    regular: "400",
-  },
   borderRadius: {
     all: "100%",
     half: "50%",
@@ -41,9 +37,9 @@ export const vars = {
 
 export const typo = {
   header: {
-    0: style({ fontSize: vars.fontSize[24], fontWeight: vars.fontWeight.bold }),
-    1: style({ fontSize: vars.fontSize[20], fontWeight: vars.fontWeight.bold }),
-    2: style({ fontSize: vars.fontSize[18], fontWeight: vars.fontWeight.bold }),
+    0: style({ fontSize: vars.fontSize[24], fontFamily: nanumGothicBold }),
+    1: style({ fontSize: vars.fontSize[20], fontFamily: nanumGothicBold }),
+    2: style({ fontSize: vars.fontSize[18], fontFamily: nanumGothicBold }),
   },
   subTitle: {},
   body: {},
