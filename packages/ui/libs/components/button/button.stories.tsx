@@ -17,6 +17,20 @@ export const ButtonNormal: Story = {
     size: "xs",
     type: "filled",
     theme: "normal",
-    children: "Button",
+    children: "버튼 테스트",
+  },
+  argTypes: {
+    size: {
+      control: "radio",
+      options: ["xs", "s", "m", "l", "xl"],
+    },
+    type: {
+      control: "radio",
+      options: ["filled", "outline", "link"],
+    },
+    theme: {
+      control: "radio",
+      options: ["primary", "normal"],
+    },
   },
 };
