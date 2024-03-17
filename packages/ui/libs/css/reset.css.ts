@@ -4,6 +4,7 @@ import { vars } from "../styles";
 
 globalStyle("body", {
   backgroundColor: vars.color.gray[6],
+  color: vars.color.gray[0],
 });
 
 globalStyle("*", {
