@@ -1,18 +1,34 @@
-import { HTMLAttributes, PropsWithChildren, createElement } from "react";
+import { createElement } from "react";
+import type { HTMLAttributes, PropsWithChildren } from "react";
 import type { RecipeVariants } from "@vanilla-extract/recipes";
+
+import classNames from "classnames";
 
 import * as styles from "./button.css";
 
 type ButtonProps = RecipeVariants<typeof styles.buttonStyle> &
   PropsWithChildren &
-  HTMLAttributes<HTMLButtonElement>;
+  (
+    | ({ element?: "button" } & HTMLAttributes<HTMLButtonElement>)
+    | ({ element?: "a" } & HTMLAttributes<HTMLAnchorElement>)
+  );
 
-const Button = ({ size, type, theme, children, ...props }: ButtonProps) => {
+const Button = ({
+  element = "button",
+  size = "m",
+  type = "filled",
+  theme = "primary",
+  children,
+  ...props
+}: ButtonProps) => {
   return createElement(
-    "button",
+    element,
     {
-      className: styles.buttonStyle({ size, type, theme }),
       ...props,
+      className: classNames(
+        styles.buttonStyle({ size, type, theme }),
+        props.className
+      ),
     },
     children
   );
