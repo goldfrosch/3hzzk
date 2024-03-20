@@ -1,8 +1,7 @@
 {
-  "name": "chzzk-additional-service",
+  "name": "3hzzk",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cli": "pnpm -F @packages/cli",
