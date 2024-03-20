@@ -33,8 +33,6 @@ export const vars = {
     bold: "700",
   },
   borderRadius: {
-    all: "100%",
-    half: "50%",
     4: "4px",
     8: "8px",
     12: "12px",
