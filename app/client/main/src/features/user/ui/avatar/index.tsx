@@ -8,10 +8,10 @@ const Avatar = () => {
         src="/image/user/default-avatar.png"
         alt="user thumbnail"
         className={styles.avatarThumbnail}
-        width={48}
-        height={48}
+        width={40}
+        height={40}
       />
-      <span>이름 테스트</span>
+      <span className={styles.avatarName}>이름 테스트</span>
     </div>
   );
 };
