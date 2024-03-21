@@ -2,9 +2,11 @@
   "name": "@packages/ui",
   "private": true,
   "version": "0.0.0",
-  "main": "index.ts",
+  "main": "./index.ts",
   "exports": {
-    "./css": "./libs/css/index.ts"
+    ".": "./index.ts",
+    "./css": "./libs/css/index.ts",
+    "./icons": "./libs/icons/index.ts"
   },
   "scripts": {},
   "dependencies": {
