@@ -7,6 +7,20 @@ globalStyle("body", {
   color: vars.color.gray[0],
 });
 
+globalStyle("a", {
+  margin: 0,
+  padding: 0,
+  verticalAlign: "baseline",
+  background: "transparent",
+
+  color: "inherit",
+  textDecoration: "none",
+});
+
+globalStyle("button", {
+  cursor: "pointer",
+});
+
 globalStyle("button, input, select, textarea", {
   fontSize: 0,
   margin: 0,
@@ -49,4 +63,5 @@ globalStyle("a", {
   fontSize: "100%",
   verticalAlign: "baseline",
   background: "transparent",
+  cursor: "pointer",
 });
