@@ -4,7 +4,7 @@ import { typo, vars } from "@packages/ui";
 export const dashboardHeader = style({
   display: "flex",
   alignItems: "center",
-  justifyContent: "space-between",
+  justifyContent: "flex-end",
 
   padding: vars.space[16],
 });
