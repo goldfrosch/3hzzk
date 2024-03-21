@@ -8,19 +8,11 @@ import * as styles from "./card.css";
 
 type CardProps = RecipeVariants<typeof styles.cardLayout> &
   PropsWithChildren &
-  (
-    | ({ element?: "div" } & HTMLAttributes<HTMLDivElement>)
-    | ({ element?: "a" } & HTMLAttributes<HTMLAnchorElement>)
-  );
+  HTMLAttributes<HTMLDivElement>;
 
-const Card = ({
-  theme = "mild",
-  element = "div",
-  children,
-  ...props
-}: CardProps) => {
+const Card = ({ theme = "mild", children, ...props }: CardProps) => {
   return createElement(
-    element,
+    "div",
     {
       ...props,
       className: classNames(styles.cardLayout({ theme }), props.className),

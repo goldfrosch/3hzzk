@@ -15,7 +15,7 @@ const VoteCategoryCard = ({
   imageUrl,
 }: VoteCategoryCardProps) => {
   return (
-    <Card element="a" className={styles.categoryLayout}>
+    <Card className={styles.categoryLayout}>
       <img
         src={imageUrl}
         alt={`${category} 썸네일`}

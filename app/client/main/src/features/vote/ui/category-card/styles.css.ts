@@ -10,6 +10,8 @@ export const categoryLayout = style({
   gap: vars.space[8],
 
   paddingBottom: 360,
+
+  cursor: "pointer",
 });
 
 export const categoryThumbnail = style({
