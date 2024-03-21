@@ -1,4 +1,5 @@
 import { style } from "@vanilla-extract/css";
+import { nanumGothicBold } from "../css/text.css";
 
 export const vars = {
   color: {
@@ -52,30 +53,57 @@ export const vars = {
 
 export const typo = {
   header: {
-    0: style({ fontSize: vars.fontSize[24] }),
-    1: style({ fontSize: vars.fontSize[20] }),
-    2: style({ fontSize: vars.fontSize[18] }),
+    0: style({
+      fontSize: vars.fontSize[24],
+      lineHeight: "130%",
+      fontWeight: vars.fontWeight.bold,
+      fontFamily: nanumGothicBold,
+    }),
+    1: style({
+      fontSize: vars.fontSize[20],
+      lineHeight: "130%",
+      fontWeight: vars.fontWeight.bold,
+      fontFamily: nanumGothicBold,
+    }),
+    2: style({
+      fontSize: vars.fontSize[18],
+      lineHeight: "130%",
+      fontWeight: vars.fontWeight.bold,
+      fontFamily: nanumGothicBold,
+    }),
   },
   subTitle: {
     0: style({
       fontSize: vars.fontSize[18],
       fontWeight: vars.fontWeight.bold,
+      lineHeight: "130%",
     }),
     1: style({
       fontSize: vars.fontSize[18],
       fontWeight: vars.fontWeight.medium,
+      lineHeight: "130%",
     }),
-    2: style({ fontSize: vars.fontSize[16], fontWeight: vars.fontWeight.bold }),
+    2: style({
+      fontSize: vars.fontSize[16],
+      fontWeight: vars.fontWeight.bold,
+      lineHeight: "130%",
+    }),
   },
   body: {
     0: style({
       fontSize: vars.fontSize[16],
       fontWeight: vars.fontWeight.medium,
+      lineHeight: "130%",
     }),
-    1: style({ fontSize: vars.fontSize[14], fontWeight: vars.fontWeight.bold }),
+    1: style({
+      fontSize: vars.fontSize[14],
+      fontWeight: vars.fontWeight.bold,
+      lineHeight: "130%",
+    }),
     2: style({
       fontSize: vars.fontSize[14],
       fontWeight: vars.fontWeight.medium,
+      lineHeight: "130%",
     }),
   },
 };
