@@ -7,6 +7,13 @@ globalStyle("body", {
   color: vars.color.gray[0],
 });
 
+globalStyle("button, input, select, textarea", {
+  fontSize: 0,
+  margin: 0,
+  verticalAlign: "baseline",
+  background: "none",
+});
+
 globalStyle("*", {
   margin: 0,
   padding: 0,
