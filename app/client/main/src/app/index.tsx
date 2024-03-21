@@ -6,6 +6,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { createRouter, RouterProvider } from "@tanstack/react-router";
 
 import "@packages/ui/css";
+import "./global.css";
 
 import { routeTree } from "@/routeTree.gen";
 
