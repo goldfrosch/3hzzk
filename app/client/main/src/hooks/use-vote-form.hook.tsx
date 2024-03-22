@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { VoteInput } from "../lib/vote-form.type";
+import type { VoteInput } from "@/features/vote/number-vote/vote-create-form";
 
 const MAX_LIST_SIZE = 30;
 
@@ -10,7 +10,7 @@ export const useVoteForm = () => {
 
   const addInputList = (input: VoteInput) => {
     setInputList((list) => {
-      const newInputList = [...list];
+      const newInputList = list.slice();
       newInputList[list.findIndex((item) => item.id === input.id)].value =
         input.value;
       const lastNum = newInputList[inputList.length - 1].id;
@@ -30,5 +30,13 @@ export const useVoteForm = () => {
     });
   };
 
-  return { inputList, addInputList };
+  const deleteInputList = (id: number) => {
+    setInputList((list) => {
+      const newInputList = list.slice().filter((item) => item.id !== id);
+
+      return newInputList;
+    });
+  };
+
+  return { inputList, addInputList, deleteInputList };
 };

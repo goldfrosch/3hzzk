@@ -1,4 +1,4 @@
-import { Avatar } from "@/features/user";
+import { Avatar } from "@/components/user";
 import * as styles from "./styles.css";
 
 const DashBoardHeader = () => {

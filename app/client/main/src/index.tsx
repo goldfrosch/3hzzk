@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { createRouter, RouterProvider } from "@tanstack/react-router";
 
+import "@/entities/chzzk/model/chzzkChat";
+
 import "@packages/ui/css";
 import "./global.css";
 

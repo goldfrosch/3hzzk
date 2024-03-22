@@ -1,4 +1,4 @@
-import { VoteCategoryCard } from "@/features/vote/ui";
+import { VoteCategoryCard } from "@/components/vote/category";
 import * as styles from "./styles.css";
 import { Link } from "@tanstack/react-router";
 
