@@ -1,4 +1,6 @@
 import { style } from "@vanilla-extract/css";
+import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
+
 import { nanumGothicBold } from "../css/text.css";
 
 export const vars = {
@@ -107,3 +109,43 @@ export const typo = {
     }),
   },
 };
+
+const layoutProperties = defineProperties({
+  properties: {
+    display: ["none", "flex", "block", "inline"],
+    flexDirection: ["row", "column"],
+    justifyContent: [
+      "stretch",
+      "flex-start",
+      "center",
+      "flex-end",
+      "space-around",
+      "space-between",
+    ],
+    alignItems: ["stretch", "flex-start", "center", "flex-end"],
+    gap: vars.space,
+
+    paddingTop: vars.space,
+    paddingBottom: vars.space,
+    paddingLeft: vars.space,
+    paddingRight: vars.space,
+
+    marginTop: vars.space,
+    marginBottom: vars.space,
+    marginLeft: vars.space,
+    marginRight: vars.space,
+  },
+  shorthands: {
+    padding: ["paddingBottom", "paddingLeft", "paddingRight", "paddingTop"],
+    py: ["paddingBottom", "paddingTop"],
+    px: ["paddingLeft", "paddingRight"],
+
+    margin: ["marginBottom", "marginLeft", "marginRight", "marginTop"],
+    my: ["paddingBottom", "paddingTop"],
+    mx: ["paddingLeft", "paddingRight"],
+  },
+});
+
+export const properties = createSprinkles(layoutProperties);
+
+export type Properties = Parameters<typeof properties>[0];
