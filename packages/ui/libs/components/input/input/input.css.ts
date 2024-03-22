@@ -22,7 +22,7 @@ export const inputLayoutStyle = recipe({
 
     backgroundColor: vars.color.gray[5],
     color: vars.color.gray[2],
-    border: "0",
+    border: `1px solid ${vars.color.gray[5]}`,
     ":focus-within": {
       border: `1px solid ${vars.color.primary[2]}`,
     },
