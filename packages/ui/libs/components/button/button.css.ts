@@ -1,5 +1,10 @@
 import { recipe } from "@vanilla-extract/recipes";
 import { typo, vars } from "../../styles";
+import { style } from "@vanilla-extract/css";
+
+export const fullWidth = style({
+  width: "100%",
+});
 
 export const buttonStyle = recipe({
   base: {
