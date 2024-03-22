@@ -1,4 +1,4 @@
-import { Layout } from "@/shared/layout";
+import { Layout } from "@/layout";
 import { VoteCategoryList } from "@/components/vote/category";
 import { createLazyFileRoute } from "@tanstack/react-router";
 
